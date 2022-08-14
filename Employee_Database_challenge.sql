@@ -5,7 +5,7 @@ SELECT e.emp_no, e.first_name, e.last_name,
 INTO retirement_titles
 FROM employees e
 JOIN titles t on (t.emp_no = e.emp_no)
-WHERE e.birth_date between '1952-01-01' and '1955-01-01'
+WHERE e.birth_date between '1952-01-01' and '1955-12-31'
 	order by e.emp_no
 
 -- A query is written and executed to create a Unique Titles table that contains the employee number, 
@@ -18,10 +18,8 @@ WHERE to_date = '9999-01-01'
 	order by emp_no
 
 
-
-
-
-
+-- A query is written and executed to create a Retiring Titles table 
+-- that contains the number of titles filled by employees who are retiring.
 SELECT COUNT (rt.emp_no),
 		rt.title
 INTO retiring_titles
