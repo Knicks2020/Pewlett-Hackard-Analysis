@@ -29,8 +29,8 @@ FROM Unique_titles as rt
 
 
 
-
-
+-- A query is written and executed to create a Mentorship Eligibility table for current
+-- employees who were born between January 1, 1965 and December 31, 1965. 
 SELECT DISTINCT on (e.emp_no)
 	e.emp_no,
 	e.first_name,
