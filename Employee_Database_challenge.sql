@@ -8,8 +8,14 @@ JOIN titles t on (t.emp_no = e.emp_no)
 WHERE e.birth_date between '1952-01-01' and '1955-01-01'
 	order by e.emp_no
 
-
-
+-- A query is written and executed to create a Unique Titles table that contains the employee number, 
+-- first and last name, and most recent title
+SELECT DISTINCT ON (emp_no) emp_no, 
+first_name, last_name, title, to_date
+INTO unique_titles
+FROM retirement_titles
+WHERE to_date = '9999-01-01'
+	order by emp_no
 
 
 
